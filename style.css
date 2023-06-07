@@ -1,100 +1,122 @@
-body{
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
 }
 
-.hero{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-form{
-    display: flex;
-    gap: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    color: gray;
+form {
+  display: flex;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: gray;
 }
 
-label{
-    margin-bottom: 16px;
+label {
+  margin-bottom: 16px;
 }
 
-input{
-    width: 150px;
-    height: 50px;
-    border: 0.5px solid gray;
-    border-radius: 8px;
-    font-weight: 800;
-    font-size: 24px;
+input {
+  width: 150px;
+  height: 50px;
+  border: 0.5px solid gray;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 24px;
+  padding-left: 10px;
 }
 
-.line-btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
+.line-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
 
-
-button{
-    background-color: blueviolet;
-    border: 0px solid;
-    border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: 0.3s;
+button {
+  background-color: blueviolet;
+  border: 0px solid;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-button:hover{
-    background-color: #6608be;
+button:hover {
+  background-color: #6608be;
 }
 
-.line{
-    width: 85%;
-    height: 1px;
-    background-color: gray;
+.line {
+  width: 85%;
+  height: 1px;
+  background-color: gray;
 }
 
 #dayError {
-    display: none;
-    font-size: 0.8em;
-  }
+  display: none;
+  font-size: 10px;
+  color: red !important;
+  font-weight: 400;
+}
 
 #dayError.visible {
-    display: block;
-  }
-  
-  input.invalid {
-    border-color: red;
-  }
+  display: block;
+}
 
-  
-  #monthError {
-    display: none;
-    font-size: 0.8em;
-  }
+input.invalid {
+  border-color: red !important;
+}
+
+#monthError {
+  display: none;
+  color: red !important;
+  font-size: 10px;
+  font-weight: 400;
+}
 
 #monthError.visible {
-    display: block;
-  }
-  
+  display: block;
+}
 
-  #yearError {
-    display: none;
-    font-size: 0.8em;
-  }
+#yearError {
+  display: none;
+  font-size: 10px;
+  font-weight: 400;
+  color: red !important;
+}
 
 #yearError.visible {
-    display: block;
-  }
-  
+  display: block;
+}
+
+span {
+  color: #6608be;
+}
+
+.calculated {
+  font-size: 64px;
+  font-weight: 800;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-style: italic;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

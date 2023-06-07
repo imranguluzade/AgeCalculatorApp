@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Age calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="hero">
-      <div class="box">
-        <form action="">
-          <div class="day form">
-            <label for="day">Day</label>
-            <input type="text" onkeypress="return inputNumber(event)" id="day" placeholder="DD" />
-            <span role="alert" id="dayError" aria-hidden="true">
-              Please enter valid birth Day
-            </span>
-          </div>
+  <title>Frontend Mentor | Age calculator app</title>
 
-          <div class="month form">
-            <label for="month">Month</label>
-            <input type="text" onkeypress="return inputNumber(event)" id="month" placeholder="MM" />
-            <span role="alert" id="monthError" aria-hidden="true">
-              Please enter valid Month
-            </span>
-          </div>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
 
-          <div class="year form">
-            <label for="year">Year</label>
-            <input type="text" onkeypress="return inputNumber(event)" id="year" placeholder="YYYY" />
-            <span role="alert" id="yearError" aria-hidden="true">
-              Please enter valid Year
-            </span>
-          </div>
-        </form>
-        <div class="line-btn">
-          <div class="line"></div>
-          <button id="submit"><img src="./assets/images/icon-arrow.svg" alt="" /></button>
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="hero">
+    <div class="box">
+      <form id="form">
+        <div class="day form">
+          <label for="day">Day</label>
+          <input class="day" name="day" type="number" id="day" placeholder="DD" />
+          <span role="alert" id="dayError" aria-hidden="true">
+            Please enter valid birth Day
+          </span>
+        </div>
+
+        <div class="month form">
+          <label for="month">Month</label>
+          <input class="month" name="month" type="number" id="month" placeholder="MM" />
+          <span role="alert" id="monthError" aria-hidden="true">
+            Please enter valid Month
+          </span>
+        </div>
+
+        <div class="year form">
+          <label for="year">Year</label>
+          <input class="year" name="year" type="number" id="year" placeholder="YYYY" />
+          <span role="alert" id="yearError" aria-hidden="true">
+            Please enter valid Year
+          </span>
+        </div>
+
+      </form>
+      <div class="line-btn">
+        <div class="line"></div>
+        <button form="form" id="submit"><img src="./assets/images/icon-arrow.svg" alt="" /></button>
+      </div>
+
+      <div class="calculated">
+        <div class="calculated-years">
+          <span class="c-years">--</span> years
+        </div>
+        <div class="calculated-months">
+          <span class="c-months">--</span> months
+        </div>
+        <div class="calculated-days">
+          <span class="c-days">--</span> days
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Imran Guluzada</a>.
-    </div>
-    <script src="./script.js"></script>
-  </body>
+
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="#">Imran Guluzada</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
