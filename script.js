@@ -9,7 +9,7 @@ const calcDays = document.querySelector(".c-days");
 const calcMonth = document.querySelector(".c-months");
 const calcYear = document.querySelector(".c-years");
 const today = new Date();
-console.log(today);
+
 let age;
 let month;
 let day;
@@ -33,7 +33,12 @@ birthMonth.addEventListener("input", function (e) {
   } else {
     mError.style.display = "none";
   }
-  month = today.getMonth() - e.target.value;
+  if (e.target.value > today.getMonth()) {
+    month = e.target.value;
+  } else {
+    month = today.getMonth() - e.target.value;
+  }
+
   calcMonth.innerHTML = month;
 });
 
@@ -43,6 +48,11 @@ birthYear.addEventListener("input", function (e) {
   } else {
     yError.style.display = "none";
   }
-  age = today.getFullYear() - e.target.value;
+  if (month > today.getMonth()) {
+    age = today.getFullYear() - e.target.value - 1;
+  } else {
+    age = today.getFullYear() - e.target.value;
+  }
+
   calcYear.innerHTML = age;
 });
